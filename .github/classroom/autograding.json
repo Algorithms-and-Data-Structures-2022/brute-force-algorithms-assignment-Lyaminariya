@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "Bits::IsBitSet",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Bits::IsBitSet\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Bits::SetBit",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Bits::SetBit\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Subsets::BitMasking",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Subsets::BitMasking\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "Subsets::Backtracking",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Subsets::Backtracking\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "SubSetSum::BitMasking",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"SubSetSum::BitMasking\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "SubSetSum::Backtracking",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"SubSetSum::Backtracking\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "Knapsack::BitMasking",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Knapsack::BitMasking\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "Knapsack::Backtracking",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Knapsack::Backtracking\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    }
+  ]
+}
