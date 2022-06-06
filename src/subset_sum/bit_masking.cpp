@@ -14,6 +14,21 @@ namespace assignment {
     const auto num_elems = static_cast<int>(set.size());  // N
     const int num_subsets = 1 << num_elems;               // 2^N
 
+    for (int mask = 0; mask < num_subsets; mask++) {
+      for (int pos = 0; pos < num_elems; pos++) {
+        std::vector<int> subset = mask2indices(set, mask);
+        int summa = 0;
+        for (int index : subset) {
+          summa += set[index];
+        }
+        if (summa > target_sum) {
+          break;
+        }
+        if (summa == target_sum) {
+          indices.push_back(subset);
+        }
+      }
+    }
     // 1. Внешний цикл: пробегаемся по всем битовым маскам от 0..00 до 1..11
     // 2. Внутренний цикл: проверка разрядов битовой маски и генерация подмножества, ассоциирующегося с этой маской
     // 3. Подсчет суммы текущего подмножества, сохранение индексов подмножества с целевой суммой в результат
