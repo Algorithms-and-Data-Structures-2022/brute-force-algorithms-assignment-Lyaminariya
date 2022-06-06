@@ -27,7 +27,7 @@ namespace assignment {
 
     // Ограничение: рассмотрены все элементы множества
     if (index == static_cast<int>(set.size()) - 1) {
-
+      subsets.push_back(mask2indices(set, mask));
       // ... сохранение полученного подмножества
 
       return;  // возвращаемся по дереву рекурсии
@@ -35,6 +35,8 @@ namespace assignment {
 
     index += 1;  // рассматриваем следующий элемент
 
+    generate(set, index, mask, subsets);
+    generate(set, index, set_bit(mask, index), subsets);
     // здесь должны быть рекурсивные вызовы ...
     // включаем или не включаем элемент с текущим индексом в подмножество (используя битовую маску)
   }
